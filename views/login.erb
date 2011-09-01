@@ -1,0 +1,27 @@
+<% content_for(:stylesheet, "login.css") %>
+
+<h2>Welcome.</h2>
+
+<div id="login_container">
+  <div id="sign_in_box">
+    <h3>Please log in</h3>
+    <form  class="error" action="/session/create" method="post">
+      <label for="name">User name</label>
+      <input type="text" name="name" id="name" />
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" />
+      <% if flash.has?(:message) %>
+        <p><%= flash[:message] %></p>
+      <% end %>
+      <input type="submit" value="Sign in" />
+    </form>
+  </div>
+
+  <div id="about_box">
+    <h3>What is RadioTAG?</h3>
+    <p>RadioTAG lets you press a button on your radio and save that
+    point in a programme..</p>
+    <img src="/images/login-picture.png" width="548" height="264" alt="Login Picture">
+  </div>
+</div>
+

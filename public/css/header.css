@@ -1,0 +1,76 @@
+.header {
+			position:relative;
+			top:0; left:0;
+			width: 976px;
+			border-bottom: 1px solid rgba(0,0,0,0.5);
+			height:80px;
+/*			background: #DDD url('../images/3-col.gif') repeat-y top left;*/
+			background:white;
+			margin:0 auto;
+}
+
+
+.header h1 {
+		font-size: 36px;
+		color:rgba(0,0,0,0.8);
+
+		position:absolute;
+		left:16px;
+		top:20px;
+
+		background: url('/images/tag_icon.png') no-repeat 0 0;
+		padding-left:50px;
+
+/*		display:block;	*/
+/*		height:60px;*/
+/*		width:200px;*/
+
+}
+
+.header nav {
+			position:absolute;
+			left:336px;
+			top:40px;
+			width:304px;
+/*		 	background:yellow;*/
+}
+
+.header nav ul {
+	width:304px;
+    display: table;
+	/*    background: green;*/
+	list-style-type: none;
+
+}
+
+.header nav ul li {
+			display: table-cell;
+			width:100px;
+}
+
+.header nav ul li a {
+			text-decoration:none;
+			color:#0099cc;  /* Blue */
+			font-size:18px;
+}
+
+.header nav ul li.link_selected a {
+	color:black;
+}
+
+.header #id_box {
+/*		background:red;*/
+		position:absolute;
+		left:656px;
+		top:40px;
+		width:304px;
+		color:rgba(0,0,0,0.8);
+		text-align:right;
+			font-size:18px;
+}
+
+.header #id_box a {
+	text-decoration:none;
+	color:#0099cc;
+	margin-left:20px;
+}

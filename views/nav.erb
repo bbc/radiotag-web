@@ -1,0 +1,12 @@
+<% if request.path_info == "/help" %>
+  <li><a href="/">Your Tags</a></li>
+  <li class="link_selected"><a href="/help">Help</a></li>
+<% elsif request.path_info == "/bookmarks" %>
+  <li class="link_selected"><a href="/bookmarks">Your Tags</a></li>
+  <li><a href="/help">Help</a></li>
+<% elsif request.path_info == "/login" %>
+  <li><a href="/help">Help</a></li>
+<% else %>
+  <li class="link_selected"><a href="/">Register</a></li>
+  <li><a href="/help">Help</a></li>
+<% end %>

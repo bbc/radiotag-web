@@ -1,0 +1,32 @@
+<% content_for(:stylesheet, "help.css") %>
+
+<h2>Admin</h2>
+
+<div id="container">
+
+  <table id="admin">
+    <thead>
+      <tr>
+        <th>User name</th>
+        <th>Number of devices</th>
+        <th>Number of tags</th>
+        <th>Last tag created</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><a href="/admin/user/<%= user.id %>/devices"><%= user.name %></a></td>
+          <td><%= user.devices.count %></td>
+          <td><%= user.tags.count %></td>
+          <% if user.tags.count > 0 %>
+            <td><%= Time.at(user.tags(:order => [:time.asc]).last.time) %></td>
+          <% else %>
+            <td></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

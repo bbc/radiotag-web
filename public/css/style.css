@@ -1,0 +1,164 @@
+html {
+			background:rgba(0,0,0,0.3);
+/*			background: url('../images/3-col.gif') repeat-y center center;		*/
+/*			background:rgba(0,0,0,0.2);*/
+}
+
+body, h1, h2, h3, h4 {
+			font-family: Georgia, Serif;
+			font-size:14px;
+}
+
+
+#container	{
+			width: 976px;
+			margin:0 auto;
+/*			background: url('../images/3-col.gif') repeat-y scroll;		*/
+			background:white;
+			position:relative;
+			top:0;
+/*			height:600px;*/
+			padding-bottom:100px;
+}
+
+h2 {
+			width: 944px;
+			padding:15px 16px 20px 16px;
+			margin:0 auto;
+			font-size:36px;
+			color:rgba(0,0,0,0.8);
+			display:block;
+			background:white;
+			border-bottom:1px solid rgba(0,0,0,0.1);
+}
+
+h3 {
+			font-size:26px;
+			color:rgba(0,0,0,0.9);
+			text-align:center;
+/*			padding-bottom:10px;*/
+}
+
+h4 {
+			font-size:18px;
+			color: rgba(0,0,0,0.3);
+}
+
+p {
+			font-family: helvetica, arial, sans-serif;
+			font-size:12px;
+			color: rgba(0,0,0,0.7);
+			line-height: 18px;
+}
+
+.hint {
+	font-family:Georgia;
+	font-size:13px;
+	line-height: 18px;
+	font-style: italic;
+	display:block;
+	color:rgba(0,0,0,0.6);
+	margin:0;
+	padding:0;
+}
+
+
+
+img {
+	display:block;
+	margin:16px auto;
+	}
+
+.pagination {
+/*		background:red;*/
+/*		width: 100px;*/
+/*		display:inline;*/
+		text-align:center;
+		padding:10px 0;
+			border-bottom:1px solid rgba(0,0,0,0.1);
+}
+
+.atBottom {
+		border-top:1px solid rgba(0,0,0,0.1);
+}
+
+.pagination ol, .pagination p {
+/*		background:green;*/
+		display:inline-block;
+		text-align:center;
+		font-family: Georgia;
+		color: rgba(0,0,0,0.7);
+		font-size:16px;
+}
+
+
+
+.pagination ol li {
+		display:inline-block;
+		padding:5px 10px;
+
+}
+
+
+.prev  {
+		border-right:1px solid rgba(0,0,0,0.2);
+}
+
+
+.next  {
+		border-left:1px solid rgba(0,0,0,0.2);
+}
+
+.pagination ol li a {
+			color: rgba(0,153,205,1);
+			text-decoration:none;
+/*			font-weight:bold;*/
+			font-size:18px;
+}
+
+.pagination ol li a.active {
+	display:inline-block;
+	background:rgba(0,0,0,0.5);
+	color:rgba(255,255,255,0.9);
+	width:30px; height:30px;
+	line-height:1.4em;
+	border-radius:20px;
+}
+
+.link_selected a {
+			color:green;//rgba(0,0,0,0.9); color: black;
+}
+
+#admin td, th {
+    padding: 10px 10px 10px 10px;
+}
+
+#admin thead tr {
+    border-bottom: 2px solid black;
+}
+
+#admin {
+    width: 600px;
+    margin-left: 16px;
+    margin-bottom: 32px;
+}
+
+#tags-chart {display: block; margin: 16px;}
+
+div.flash  {
+   font-family: Georgia, Serif;
+   font-size: 16px;
+
+   width: 944px; /* 976 - padding */
+   margin:0 auto;
+   background-color: #FFE640;
+   position: relative;
+   padding: 16px;
+}
+
+div.flash p {
+   font-family: Georgia, Serif;
+   font-size: 16px;
+   padding: 8px;
+   text-align: center ;
+}

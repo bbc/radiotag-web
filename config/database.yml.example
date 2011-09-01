@@ -1,0 +1,11 @@
+:development:
+  :user: radiotag
+  :password: radiotag
+  :database: radiotag_mobile_development
+  :host: localhost
+
+:production:
+  :user: radiotag
+  :password: radiotag123+
+  :database: radiotag_production
+  :host: 10.10.12.140

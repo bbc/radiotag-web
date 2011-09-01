@@ -1,0 +1,9 @@
+:test:
+   :admin_users: ['testuser']
+
+:development:
+   :admin_users: ['alice', 'bob']
+
+:production:
+   :admin_users: ['alice', 'bob', 'charlie']
+

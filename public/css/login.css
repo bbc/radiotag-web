@@ -1,0 +1,107 @@
+/******** Absolute positioned boxes ****************/
+
+#login_container {
+    width: 976px;
+    margin:0 auto;
+    background:white;
+    position:relative;
+    top:0;
+    height:450px;
+}
+
+#sign_in_box, #about_box  {
+    position:absolute;
+    top:30px;
+}
+
+#sign_in_box  {
+    left:16px;
+    width:304px;
+    height:390px;
+    padding:0;
+    border-right:1px solid rgba(0,0,0,0.3);
+}
+
+#about_box {
+    left:336px;
+    width:624px;
+}
+
+
+/************** Sign in form *************/
+
+#sign_in_box form  {
+    width:252px;
+    margin:10px auto;
+    padding:10px;
+
+}
+#sign_in_box form  p {
+    text-align:center;
+    color:red;
+    font-size:16px;
+    padding-top:10px;
+    opacity:0;
+}
+
+#sign_in_box form.error {
+    background:rgba(255,0,0,0.1);
+    border: red 1px solid;
+}
+
+#sign_in_box form.error  p {
+    opacity:1;
+}
+
+#sign_in_box form label  {
+    font-family: Helvetica, Arial, Verdana, Sans-serif;
+    font-size:14px;
+    display:block;
+    margin:10px 0 4px 13px ;
+    color:rgba(0,0,0,0.6);
+}
+
+#sign_in_box form input[type=text], #sign_in_box form input[type=password]  {
+    font-family: Georgia, Serif;
+    font-size:18px;
+    display:block;
+    margin: auto;
+    padding:5px;
+    border:1px solid rgba(0,0,0,0.9	);
+    width:220px	;
+    -moz-border-radius:20px;
+    -webkit-border-radius:20px;
+    border-radius: 20px 20px 20px 20px; /* for some reason you have to declare all corners in ie*/
+}
+
+#sign_in_box form input[type=submit]  {
+    display:block;
+    padding:8px 0 ;
+    width:130px	;
+    color:white;
+    font-family: Georgia, Serif;
+    font-size:18px;
+    background:#0099cc;
+    border:0;
+    -moz-border-radius:20px;
+    -webkit-border-radius:20px;
+    border-radius: 20px 20px 20px 20px; /* for some reason you have to declare all corners in ie*/
+    margin: 30px auto;
+}
+
+/**************** About the prototype ****************/
+
+#about_box p {
+    /*	background:red;*/
+    display:block;
+    width:286px;
+    position:absolute;
+    top:50px;
+    left:16px;
+}
+
+#about_box img {
+    display:block;
+    margin:0 auto;
+    margin-top:40px;
+}

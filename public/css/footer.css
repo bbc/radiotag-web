@@ -1,0 +1,44 @@
+.footer {
+
+		width: 976px;
+		border-top: 1px solid rgba(0,0,0,0.5);
+		height:80px;
+/*		background: #DDD url('../images/3-col.gif') repeat-y top left;*/
+		background:white;
+		margin:0 auto;
+		padding-top:20px;
+	 position:relative;
+
+}
+
+.footer #bbc_rd_logo {
+	font-family: gillsans, helvetica, georgia, sans-serif;
+	font-size: 20px;
+	display:inline-block;
+	background: url('/images/bbc.png') no-repeat 0 0 ;
+	padding-left:90px;
+
+		position:absolute;
+		top:20px;
+		left:16px;
+}
+
+.footer div #contact_us  {
+	display:block;
+	width:304px;
+	background:yellow;
+		position:absolute;
+		top:20px;
+		right:16px;
+
+}
+
+.footer div#contact_us a {
+	display:block;
+			text-decoration:none;
+			color:#0099cc;
+			font-size:18px;
+			text-align:right;
+			margin-right:16px;
+
+}

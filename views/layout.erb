@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title><%= content(:title) || "RadioTAG" %></title>
+    <link rel="stylesheet" href="/css/html5reset.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/css/reset-min.css" type="text/css" media="screen" title="no title">
+
+    <link rel="stylesheet" href="/css/fonts-min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/css/header.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="/css/register.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="/css/footer.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen, projection">
+
+    <% if content(:stylesheet) %>
+      <link rel="stylesheet" href="/css/<%= content(:stylesheet) %>" type="text/css" media="screen, projection">
+    <% end %>
+
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="header">
+      <h1>RadioTAG</h1>
+      <nav>
+        <ul>
+          <%= erb :nav %>
+        </ul>
+      </nav>
+      <% if current_user %>
+      <div id="id_box">
+        Hello <%= current_user.name.capitalize %>
+        <a href='/session/destroy' id="logout">Logout</a>
+      </div>
+      <% end %>
+    </div> <!-- header -->
+
+    <%= yield %>
+
+    <div class="footer">
+      <div id="bbc_rd_logo">BBC Research &amp; Development</div>
+      <div id="contact_us">
+        <% if current_user && current_user.admin? %>
+        <a href="/admin">Admin</a>
+        <% else %>
+        <a href="mailto:prototyping@bbc.co.uk">Contact us</a>
+        <% end %>
+      </div>
+    </div> <!-- footer -->
+  </body>
+</html>

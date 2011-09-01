@@ -1,0 +1,133 @@
+#bookmarks {
+/*	background:red	;*/
+}
+
+#bookmarks h3 {
+			font-size:26px;
+			color:rgba(0,0,0,0.9);
+			text-align:left;
+			margin-left:16px;
+			padding:10px 0;
+/*			border-bottom:2px solid red;*/
+/*			background:red;*/
+}
+
+#bookmarks .tag_box {
+	display:block;
+	height:130px;
+	width: 910px;
+	margin:0 auto;
+        margin-left: 30px;
+	position:relative;
+	border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+#bookmarks .tag-detail {
+	display:table-cell;
+	position:absolute;
+	left:0; top:0;
+	vertical-align:top;
+	background: url('/images/tag.png') no-repeat scroll top center;
+	width:48px;
+	height:70px;
+	text-align:center;
+	color:rgba(255,255,255,0.9);
+	font-family: Georgia, helvetica;
+	font-size:15px;
+/*	letter-spacing:1px;*/
+	padding-top:10px;
+
+}
+
+#bookmarks .tag_box img {
+		display:table-cell;
+		position:absolute;
+		left:63px;
+		top:10px;
+		padding:0;margin:0;
+}
+
+#bookmarks .tag_box .tag_info {
+	position:absolute;
+	left:226px;
+	top:10px;
+	padding:0;margin:0;
+	width: 544px;
+/*	background:yellow;*/
+	height:150px;
+}
+
+.tag_info .network {
+		display:block;
+		font-family:Georgia;
+		color:rgba(0,0,0,0.6);
+		font-size:14px;
+		padding-bottom:0px;
+}
+
+.tag_info h4 {
+		font-size:28px;
+		font-family:Georgia;
+		text-decoration:none;
+		line-height: 1.3em;
+}
+
+.tag_info a {
+		color:rgba(0,153,205,1);
+		font-family:Georgia;
+		text-decoration:none;
+		line-height: 1.3em;
+
+}
+
+.tag_info p {
+	font-size:16px;
+	padding:0px 0;
+	color:rgba(0,0,0,0.6);
+	line-height: 1.4em;
+}
+
+.vod_info  {
+	display:table-cell;
+	position:absolute;
+	left:770px;
+	top:40px;
+	width: 140px;
+/*	background:red;*/
+	text-align:center;
+}
+
+.play_button  {
+    display:block;
+	background: rgba(0,153,205,1) url('/images/play_white.png') no-repeat scroll 15px center;
+	text-decoration:none;
+	padding-left:40px;
+	padding:5px 0 5px 20px ;
+	width:80px	;
+	color:white;
+	font-family: Georgia, Serif;
+	font-size:14px;
+	border:0;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius: 15px 15px 15px 15px; /* for some reason you have to declare all corners in ie*/
+	text-align:center;
+		-webkit-transition: all 0.5s ease-in-out;
+		transition: all 0.5s ease-in-out;
+		margin:auto;
+}
+
+.play_button:hover {
+		background: rgba(0,183,235,1) url('/images/play_white.png') no-repeat scroll 15px center;
+}
+
+.vod_info.unavailable {
+	display:none;
+}
+.vod_info p {
+			font-family:Helvetica;
+			font-size:14px;
+			color:rgba(0,0,0,0.6);
+/*			font-style: italic;*/
+			padding-top: 8px;
+}

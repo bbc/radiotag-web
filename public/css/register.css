@@ -1,0 +1,216 @@
+#register_container {
+		width: 976px;
+		margin:0 auto;
+		background:white;
+		position:relative;
+		top:0;	
+		height:550px;
+}
+
+#register_steps  {
+/*	background:red;*/
+	list-style:none;
+	border:0;
+}
+
+#register_steps ul { 	position:relative;    }
+
+#register_steps li {
+		position:absolute;
+		top:30px;
+		display:inline-block;
+		width:190px;
+		padding:16px 16px 16px 16px	;
+		text-align:center;
+		min-height:370px;	
+}
+
+#register_steps li:nth-child(n+1) { left:16px;}
+#register_steps li:nth-child(n+2) { left:256px;}
+#register_steps li:nth-child(n+3) { left:496px;}
+#register_steps li:nth-child(n+4) { left:736px;}
+
+
+#register_steps h4 {
+			font-size:16px;
+			color: rgba(0,0,0,0.6);
+/*			color:green;*/
+			padding:10px 0;
+}
+
+	
+#register_steps li p {
+/*			background:red;*/
+			height:70px;
+}
+
+.vis_box {
+	display:inline-block;
+	width:166px;
+	border:1px solid rgba(0,0,0,0.2);
+	padding:10px 10px;
+	margin:0;
+/*	border-radius:15px;*/
+	height:90px;
+	margin-bottom:10px;
+}
+
+
+.vis_box.error {
+	background:rgba(255,0,0,0.1);
+	border: red 1px solid;
+}
+
+.vis_box.error .hint:after {
+	color:red;
+	text-replace: "It looks like"  "Goodbye"; 
+}
+
+
+
+
+#register_steps img, #your_PIN  { 
+	padding:0;
+	margin:0 auto;
+	}
+#register_steps form {
+	margin:20px auto;
+}	
+
+#register_steps form input[type=text]  {
+	font-family: Georgia, Serif;
+	font-size:18px;
+	display:block;
+	margin:auto;
+	padding:5px;
+	border:1px solid rgba(0,0,0,0.9	);
+	width:140px	;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border-radius: 20px 20px 20px 20px; /* for some reason you have to declare all corners in ie*/	
+}
+
+
+
+
+#register_steps form p {
+	display:block;
+		margin-top:15px;
+		text-align:center;
+		color:red;
+		font-size:16px;
+
+}
+
+
+
+
+#register_steps a, #register_steps form input[type="button"], #register_steps form input[type="submit"]  {
+	position:absolute;
+	top:310px;
+	left:50px;
+	display:block;
+	text-decoration:none;		
+	padding:8px 0 ;
+	width:130px	;	
+	color:white;
+	font-family: Georgia, Serif;
+	font-size:18px;	
+	background:#0099cc;
+	border:0;
+	-moz-border-radius:20px;
+	-webkit-border-radius:20px;
+	border-radius: 20px 20px 20px 20px; /* for some reason you have to declare all corners in ie*/
+	margin: 30px auto;
+}
+
+
+
+#your_PIN {
+		display:block;
+		font-family:Georgia;
+		font-size:40px;
+		background:  url('../images/step3.png') no-repeat 0 0px;
+		margin-left:14px;
+		height:140px;
+		width:140px;
+
+}
+
+/************ Active step ************/
+
+.active_step 				{
+							opacity: 1;
+							-moz-box-shadow: 0 0 1px 1px rgba(0,153,205,0.4);
+							-webkit-box-shadow: 0 0 1px 1px rgba(0,153,205,0.4);
+							box-shadow: 0 0 2px 1px rgba(0,153,205,0.4);
+							-webkit-transition: all 0.5s ease-in-out; 
+							transition: all 0.5s ease-in-out;
+							}
+.active_step:hover 			{
+							-moz-box-shadow: 0 0 1px 1px rgba(0,153,205,1);
+							-webkit-box-shadow: 0 0 1px 1px rgba(0,153,205,1);
+							box-shadow: 0 0 2px 1px rgba(0,153,205,1);
+							}
+#register_steps .active_step h3 
+							{
+							color:rgba(0,0,0,0.9);
+							}
+#register_steps .active_step a,
+#register_steps .active_step input[type="submit"]
+							{
+							-webkit-transition: all 0.5s ease-in-out; 
+							transition: all 0.2s linear;
+							}	
+#register_steps .active_step a:hover,
+#register_steps .active_step input[type="submit"]:hover 
+							{
+							background: rgba(0,183,235,1);
+							}	
+
+
+/************ Greyed out step ************/
+
+#register_steps .greyed_step h3 
+							{
+							color:rgba(0,0,0,0.9);
+							}
+							
+#register_steps .greyed_step a,
+#register_steps .greyed_step form input[type="submit"] 
+							{
+							display:none;
+							}
+
+#register_steps .greyed_step form input[type="text"] {
+							border-color: rgba(0,0,0,0.2);
+							}
+
+#register_steps .greyed_step #your_PIN {
+							color:rgba(0,0,0,0.2);	
+							}
+						
+.greyed_step				{ 
+							opacity:0.4;
+							background:rgba(255,255,255,0.6);
+							border:1px solid rgba(0,0,0,0.2);
+							}
+
+
+/************ Completed step ************/
+	
+.completed_step 			{ 
+							opacity:1;
+							background: url('../images/tick.png') no-repeat scroll center center;
+								-moz-box-shadow: 0 0 1px 1px rgba(0,0,0,0.1);
+								-webkit-box-shadow: 0 0 1px 1px rgba(0,0,0,0.1);
+								box-shadow: 0 0 2px 1px rgba(0,0,0,0.1);
+							}	
+.completed_step p, 
+.completed_step div, 
+.completed_step img,
+#register_steps .completed_step a	
+							{
+							display:none;
+							}
+

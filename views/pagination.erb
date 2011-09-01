@@ -1,0 +1,21 @@
+<ol>
+  <% if (@page - 1) > 0 %>
+    <li class="prev"><a href="/bookmarks?page=<%= @page - 1 %>">previous</a></li>
+  <% else %>
+    <li class="prev">previous</li>
+  <% end %>
+
+  <% 1.upto(@number_of_pages) do |page_number| %>
+    <% if @page == page_number %>
+      <li><a class="active" href="/bookmarks?page=<%= page_number %>"><%= page_number %></a></li>
+    <% else %>
+      <li><a href="/bookmarks?page=<%= page_number %>"><%= page_number %></a></li>
+    <% end %>
+  <% end %>
+
+  <% if (@page + 1) <= @number_of_pages %>
+    <li class="next"><a href="/bookmarks?page=<%= @page + 1 %>">next</a></li>
+  <% else %>
+    <li class="next">next</li>
+  <% end %>
+</ol>

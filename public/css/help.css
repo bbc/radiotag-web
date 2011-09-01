@@ -1,0 +1,52 @@
+#faq_list {
+		width:624px;
+		padding-top:16px;
+		margin-left:16px;
+}
+
+#faq_list li {
+		list-style-type: lower-alpha;
+		margin-left:20px;
+		padding-bottom:20px;
+}
+	
+	
+#faq_list li a {
+		text-decoration:none;
+		font-size: 20px;
+		line-height: 24px;
+		color: rgba(0,153,205,1);
+}
+
+.answer {
+	width: 944px;
+	border-top:1px solid rgba(0,0,0,0.4);
+	margin-top:10px;
+	margin-left:16px;
+	padding:0 0 20px 0;
+	text-align:left;
+}
+
+.answer h3 {
+	display:block;
+	text-align:left;
+	padding:10px 0;
+}
+
+.answer p {
+	display:block;
+	width:624px;
+	font-size:16px;
+	line-height:24px;
+	color:rgba(0,0,0,0.6);
+/*	background:yellow;*/
+}
+
+
+.answer a {
+	display:block;
+	color: rgba(0,153,205,1);
+	padding:10px 0;
+	font-size:18px;
+	text-decoration:none;
+}

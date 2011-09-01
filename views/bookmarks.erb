@@ -1,0 +1,45 @@
+<% content_for(:stylesheet, "bookmarks.css") %>
+
+<h2>Your Tags</h2>
+
+<div id="container">
+  <div class="pagination"><%= erb :pagination %></div>
+
+  <div id="bookmarks">
+    <% @bookmarks.each do |day| %>
+      <h3><%= Time.at(day.first.time).strftime("%A, %e %B, %Y") %></h3>
+      <% day.each do |tag| %>
+        <% if tag.episode_data %>
+          <div class="tag_box">
+	    <span class="tag-detail active"><%= Time.at(tag.time).strftime("%R") %></span>
+	    <img src="<%= tag.thumbnail_url %>" />
+            <div class="tag_info">
+	      <span class="network"><%= tag.service_title %></span>
+	      <h4><a href="<%= tag.programmes_url %>"><%= tag.title %></a></h4>
+	      <p><%= tag.description %></p>
+	    </div>
+	    <div class="vod_info">
+              <% if tag.episode_data["media_availability"] %>
+              <a class="play_button" href="<%= tag.iplayer_url %>">Play now</a>
+	      <p><%= tag.episode_data["media_availability"] %></p>
+              <% end %>
+	    </div>
+          </div>
+        <% else %>
+          <div class="tag_box">
+	    <span class="tag-detail active"><%= Time.at(tag.time).strftime("%R") %></span>
+	    <img src="http://dummyimage.com/150x84/eeeeee&text=+" />
+            <div class="tag_info">
+	      <span class="network"><%= tag.service_title %></span>
+	      <h4>Sorry!</h4>
+	      <p>No information available for this tag</p>
+	    </div>
+	    <div class="vod_info"></div>
+          </div>
+        <% end %> <!-- if -->
+      <% end %> <!-- day -->
+    <% end %> <!-- bookmarks -->
+  </div> <!-- bookmarks -->
+
+  <div class="pagination atBottom"><%= erb :pagination %></div>
+</div> <!-- container -->

@@ -1,0 +1,44 @@
+<% content_for(:stylesheet, "help.css") %>
+
+<h2>Admin - <%= @user.name %></h2>
+
+<div id="container">
+
+  <table id="admin">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>Token</th>
+        <th>PIN</th>
+        <th>Number of tags</th>
+        <th>Authorized?</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @user.devices.each do |device| %>
+        <tr>
+          <td><%= device.id %></td>
+          <td><%= device.token %></td>
+          <td><%= device.pin %></td>
+          <td><%= device.tags.count %></td>
+          <% if device.authorized? %>
+            <td>true</td>
+            <td>
+            <form action="/device/<%= device.id %>/token" method="post">
+              <input  type="hidden" name="_method" value="delete" />
+              <input id="btn_s2" type="submit" value="Deauthorize" />
+            </form>
+          </td>
+          <% else %>
+            <td>false</td>
+            <td></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <img id="tags-chart" src="<%= @user.tag_chart %>" />
+</div>
