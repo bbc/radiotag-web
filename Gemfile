@@ -1,5 +1,6 @@
 source :rubygems
 
+gem 'data_mapper', '>= 1.1.0'
 gem 'addressable'
 gem 'sinatra'
 gem 'omniauth'
@@ -8,15 +9,16 @@ gem 'dm-mysql-adapter'
 gem 'rest-client'
 gem 'rack-flash'
 
-gem "bbc_service_map", :git => "git://github.com/bbcrd/bbc_service_map.git"
-gem "radiotag-models", :git => "git://github.com/bbcrd/radiotag-models.git"
+gem 'bbc_service_map', :git => 'git://github.com/bbcrd/bbc_service_map.git'
+gem 'radiotag-models', :git => 'git://github.com/bbcrd/radiotag-models.git'
 
 group :development do
   gem 'socksify'
-  gem "unicorn"
+  gem 'unicorn'
 end
 
 group :test do
+  gem 'rake'
   gem 'shoulda'
   gem 'mocha'
   gem 'rack-test'
