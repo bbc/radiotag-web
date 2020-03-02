@@ -122,7 +122,7 @@ GEM
       hashie (>= 3.4.6, < 3.7.0)
       rack (>= 1.6.2, < 3)
     public_suffix (3.1.0)
-    rack (2.0.7)
+    rack (2.0.8)
     rack-flash (0.1.2)
       rack
     rack-protection (2.0.5)
